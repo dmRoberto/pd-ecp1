@@ -1,41 +1,26 @@
 package es.upm.miw.pd.ecp1.operaciones;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Operations {
-    private Object[] operators = new Object[10];
+    List <Operator> operations = new ArrayList<Operator>();
 
-    public void add(Object operator) {
-        for (int i = 0; i < operators.length; i++) {
-            if (operators[i] == null) {
-                operators[i] = operator;
-
-                return;
-            }
-        }
-        return;
+    public void add(Operator operator) {
+    	operations.add(operator);
     }
 
     public void reset() {
-        for (int i = 0; i < operators.length; i++) {
-            operators[i] = null;
-        }
+    	operations.clear();
     }
 
-    // MAL DISEÑADO... MAL CODIFICADO
     public int total() {
+       
         int result = 0;
         String separator = "";
-        for (Object operando : operators) {
-            if (operando != null) {
-                System.out.print(separator + operando.toString());
-                if (operando.getClass().getSimpleName().equals("Summation")) {
-                    result += ((Summation) operando).sum();
-                } else if (operando.getClass().getSimpleName().equals("Subtraction")){
-                    result += ((Subtraction) operando).subtract();
-                }else {
-                	result += ((Multiplication) operando).multi();
-                }
-            }
-            separator = "+";
+        for (Operator operator : operations){
+        	System.out.print(separator + operator.toString());
+        	result += operator.operate();
         }
         System.out.print(">>> ");
         return result;
