@@ -27,10 +27,12 @@ public class Operations {
         for (Object operando : operators) {
             if (operando != null) {
                 System.out.print(separator + operando.toString());
-                if (operando.getClass().getSimpleName().equals("Addition")) {
-                    result += ((Addition) operando).sum();
-                } else {
+                if (operando.getClass().getSimpleName().equals("Summation")) {
+                    result += ((Summation) operando).sum();
+                } else if (operando.getClass().getSimpleName().equals("Subtraction")){
                     result += ((Subtraction) operando).subtract();
+                }else {
+                	result += ((Multiplication) operando).multi();
                 }
             }
             separator = "+";
