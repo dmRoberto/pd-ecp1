@@ -4,9 +4,6 @@ import java.util.List;
 
 public class MainGestionVehiculos {
 	
-	List<Vehiculo> vehiculos;
-	
-
 	public MainGestionVehiculos (){
 		
 	}

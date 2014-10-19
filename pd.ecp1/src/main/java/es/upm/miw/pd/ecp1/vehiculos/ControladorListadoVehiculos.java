@@ -1,9 +1,16 @@
 package es.upm.miw.pd.ecp1.vehiculos;
 
-public class ControladorListadoVehiculos {
+import java.util.List;
 
+public class ControladorListadoVehiculos {
 	
-	public void listarVehiculos (){
+	private List<Vehiculo> vehiculos;
+	
+	public ControladorListadoVehiculos (List<Vehiculo> vehiculos){
+		this.vehiculos = vehiculos;
+	}
+
+	public void listarVehiculos (List<Vehiculo> vehiculos){
 		
 	}
 	
