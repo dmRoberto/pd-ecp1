@@ -1,8 +1,8 @@
 package es.upm.miw.pd.ecp1.operaciones;
 
-public class Addition extends Operator {
+public class Summation extends Operator {
 
-    public Addition(int operator1, int operator2) {
+    public Summation(int operator1, int operator2) {
 		super(operator1, operator2);
 	}
 
