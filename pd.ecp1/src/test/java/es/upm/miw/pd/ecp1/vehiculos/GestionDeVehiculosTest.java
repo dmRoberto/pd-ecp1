@@ -22,8 +22,8 @@ public class GestionDeVehiculosTest {
 	@Test
 	public void alquilerCocheCategoriaATest() {
 		assertEquals(30, coche.precioAlquiler(3), 10e-5);
-		assertEquals(64, coche.precioAlquiler(7), 10e-5);
-		assertEquals(69, coche.precioAlquiler(8), 10e-5);
+		assertEquals(62, coche.precioAlquiler(7), 10e-5);
+		assertEquals(67, coche.precioAlquiler(8), 10e-5);
 	}
 
 	@Test
@@ -32,7 +32,7 @@ public class GestionDeVehiculosTest {
 
 		assertEquals(45, coche.precioAlquiler(3), 10e-5);
 		assertEquals(93, coche.precioAlquiler(7), 10e-5);
-		assertEquals(145.5, coche.precioAlquiler(8), 10e-5);
+		assertEquals(100.5, coche.precioAlquiler(8), 10e-5);
 
 	}
 
@@ -60,11 +60,11 @@ public class GestionDeVehiculosTest {
 
 	@Test
 	public void mostratVehiculoTest() {
-		assertEquals("Tipo vehiculo: Moto - ID: 1 - Descripcion: Descripcion_moto",
+		assertEquals("ID: 1 - Tipo vehiculo: MOTO - Descripcion: Descripcion_moto",
 				moto.toString());
-		assertEquals("Tipo vehiculo: Coche - ID: 2 - Categoria: A - Descripcion: Descripcion_coche",
+		assertEquals("ID: 2 - Tipo vehiculo: COCHE - Categoria: A - Descripcion: Descripcion_coche",
 				coche.toString());
-		assertEquals("Tipo vehiculo: Bicicleta - ID: 3 - Descripcion: Descripcion_bicicleta",
+		assertEquals("ID: 3 - Tipo vehiculo: BICICLETA - Descripcion: Descripcion_bicicleta",
 				bicicleta.toString());
 	}
 
